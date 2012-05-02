@@ -38,6 +38,7 @@ module DelayedPaperclip
 
       def process_delayed!
         self.job_is_processing = true
+        self.post_processing_with_delay = true
         reprocess!
         self.job_is_processing = false
       end
